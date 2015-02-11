@@ -104,8 +104,8 @@ window.onload = function()
 		computerPaddle.body.immovable = true;
 		
 		//ball settings
-		ball = game.add.sprite(playerPaddle.x - 32, playerPaddle.y, 'ball');
-		ball.scale.setTo(.5, .5);
+		ball = game.add.sprite(playerPaddle.x - 32, playerPaddle.y - 16, 'ball');
+		ball.scale.setTo(.25, .25);
 		ball.anchor.set(0.5);
 		ball.checkWorldBounds = true;
 		game.physics.enable(ball, Phaser.Physics.ARCADE);
