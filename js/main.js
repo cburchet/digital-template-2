@@ -41,14 +41,13 @@ window.onload = function()
 		
 		cursors = game.input.keyboard.createCursorKeys();
 		
-		playerBrick.scale.setTo(.125, .125);
-		
 		//brick placement
 		playerBricks = game.add.group();
 		playerBricks.enableBody = true;
 		playerBricks.physicsBodyType = Phaser.Physics.ARCADE;
 
 		var playerBrick;
+		playerBrick.scale.setTo(.125, .125);
 
 		for (var x = 0; x < 4; x++)
 		{
