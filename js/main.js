@@ -47,13 +47,13 @@ window.onload = function()
 		playerBricks.physicsBodyType = Phaser.Physics.ARCADE;
 
 		var playerBrick;
-		playerBrick.scale.setTo(.125, .125);
 
 		for (var x = 0; x < 4; x++)
 		{
 			for (var y = 0; y < 15; y++)
 			{
-				playerBrick = playerBricks.create(600 + (x * 36), 100 + (y * 52), 'playerBrick');
+				playerBrick = playerBricks.create(600 + (x * 36), 100 + (y * 52), 'playerBrick
+				playerBrick.scale.setTo(.125, .125);
 				playerBrick.angle = 90;
 				playerBrick.body.bounce.set(1);
 				playerBrick.body.immovable = true;
