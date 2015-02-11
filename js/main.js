@@ -103,6 +103,7 @@ window.onload = function()
 		
 		//ball settings
 		ball = game.add.sprite(playerPaddle.x, playerPaddle.y - 16, 'ball');
+		ball.scale.setTo(.5, .5);
 		ball.anchor.set(0.5);
 		ball.checkWorldBounds = true;
 		game.physics.enable(ball, Phaser.Physics.ARCADE);
