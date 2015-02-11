@@ -123,7 +123,7 @@ window.onload = function()
 		
 		//playerPaddle.x = game.input.x;
 
-		if (playerPaddle.x < 24)
+		if (playerPaddle.input.x < 24)
 		{
 			playerPaddle.x = 24;
 		}
