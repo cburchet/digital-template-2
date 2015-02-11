@@ -122,20 +122,20 @@ window.onload = function()
 	function update() 
 	{
 		
-		playerPaddle.x = game.input.x;
+		playerPaddle.y = game.input.y;
 
-		if (playerPaddle.x < 24)
+		if (playerPaddle.y < 24)
 		{
-			playerPaddle.x = 24;
+			playerPaddle.y = 24;
 		}
-		else if (playerPaddle.x > game.width - 24)
+		else if (playerPaddle.y > game.height - 24)
 		{
-			playerPaddle.x = game.width - 24;
+			playerPaddle.y = game.height - 24;
 		}
 
 		if (ballOnPaddle)
 		{
-			ball.body.x = playerPaddle.x;
+			ball.body.y = playerPaddle.y;
 		}
 		else
 		{
@@ -180,8 +180,8 @@ window.onload = function()
 
         ballOnPaddle = true;
         ball.body.velocity.set(0);
-        ball.x = playerPaddle.x + 16;
-        ball.y = playerPaddle.y - 16;
+        ball.x = playerPaddle.x - 16;
+        ball.y = playerPaddle.y;
 
         playerBricks.callAll('revive');
 		computerBricks.callAll('revive');
