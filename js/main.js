@@ -80,7 +80,7 @@ window.onload = function()
 		
 		
 		//paddle settings
-		playerPaddle = game.add.sprite(game.world.centerX + 175, game.world.centerY, 'playerPaddle');
+		playerPaddle = game.add.sprite(game.world.centerX + 125, game.world.centerY, 'playerPaddle');
 		game.physics.enable(playerPaddle, Phaser.Physics.ARCADE);
 		playerPaddle.scale.setTo(.5, .5);
 		playerPaddle.angle = 90;
