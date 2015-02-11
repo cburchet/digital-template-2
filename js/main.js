@@ -41,6 +41,8 @@ window.onload = function()
 		
 		cursors = game.input.keyboard.createCursorKeys();
 		
+		playerBrick.scale.setTo(.125, .125);
+		
 		//brick placement
 		playerBricks = game.add.group();
 		playerBricks.enableBody = true;
@@ -123,7 +125,7 @@ window.onload = function()
 		
 		//playerPaddle.x = game.input.x;
 
-		if (playerPaddle.input.x < 24)
+		if (playerPaddle.x < 24)
 		{
 			playerPaddle.x = 24;
 		}
