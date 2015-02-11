@@ -214,13 +214,13 @@ window.onload = function()
 	function updateComputerTiles()
 	{
 		totalComputerBricks--;
-		update text;
+		//update text;
 	}
 	
-	function gameover()
-	{
-		this.game.paused = true;
-		gameoverText = game.add.text(350, 300, 'Game Over', { fontSize: '128px', fill: '#000' });
-	}
+	//function gameover()
+	//{
+	//	this.game.paused = true;
+//		gameoverText = game.add.text(350, 300, 'Game Over', { fontSize: '128px', fill: '#000' });
+	//}
 };
 	 
