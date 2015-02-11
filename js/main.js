@@ -11,11 +11,11 @@ window.onload = function()
 	var ball;
 	var playerPaddle;
 	var playerBricks;
-	var totalPlayerBricks = 60;
+	var totalPlayerBricks = 40;
 	
 	var computerPaddle;
 	var computerBricks;
-	var totalComputerBricks = 60;
+	var totalComputerBricks = 40;
 	
 	var gameoverText;
 	var playerTilesLeftText;
