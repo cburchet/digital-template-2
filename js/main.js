@@ -178,9 +178,8 @@ window.onload = function()
 
         ballOnPaddle = true;
         ball.body.velocity.set(0);
-        ball.x = paddle.x + 16;
-        ball.y = paddle.y - 16;
-        ball.animations.stop();
+        ball.x = playerPaddle.x + 16;
+        ball.y = playerPaddle.y - 16;
 
         playerBricks.callAll('revive');
 		computerBricks.callAll('revive');
