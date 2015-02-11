@@ -102,7 +102,7 @@ window.onload = function()
 		computerPaddle.body.immovable = true;
 		
 		//ball settings
-		ball = game.add.sprite(playerPaddle.x, playerPaddle.y - 16, 'ball');
+		ball = game.add.sprite(playerPaddle.x - 32, playerPaddle.y, 'ball');
 		ball.scale.setTo(.5, .5);
 		ball.anchor.set(0.5);
 		ball.checkWorldBounds = true;
