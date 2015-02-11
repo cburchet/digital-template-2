@@ -115,7 +115,7 @@ window.onload = function()
 		
 		playerTilesLeftText = game.add.text(500, 16, 'Player Tiles: ' + totalPlayerBricks, { fontSize: '32px', fill: '#000' });
 		
-		computerTilesLeftText = game.add.text(300, 16, 'Computer Tiles: ' + totalComputerBricks, { fontSize: '32px', fill: '#000' });
+		cpuTilesLeftText = game.add.text(300, 16, 'Computer Tiles: ' + totalComputerBricks, { fontSize: '32px', fill: '#000' });
 	}
 	 
 	function update() 
