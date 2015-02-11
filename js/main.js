@@ -140,7 +140,8 @@ window.onload = function()
 		{
 			game.physics.arcade.collide(ball, playerPaddle, ballHitPaddle, null, this);
 			game.physics.arcade.collide(ball, computerPaddle, ballHitPaddle, null, this);
-			game.physics.arcade.collide(ball, bricks, ballHitBrick, null, this);
+			game.physics.arcade.collide(ball, playerBricks, ballHitBrick, null, this);
+			game.physics.arcade.collide(ball, computerBricks, ballHitBrick, null, this);
 		}
 	}
 
