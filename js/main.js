@@ -50,7 +50,7 @@ window.onload = function()
 
 		for (var x = 0; x < 4; x++)
 		{
-			for (var y = 0; y < 15; y++)
+			for (var y = 0; y < 10; y++)
 			{
 				playerBrick = playerBricks.create(600 + (x * 36), 100 + (y * 52), 'playerBrick');
 				playerBrick.scale.setTo(.0625, .0625);
@@ -68,7 +68,7 @@ window.onload = function()
 
 		for (var x = 0; x < 4; x++)
 		{
-			for (var y = 0; y < 15; y++)
+			for (var y = 0; y < 10; y++)
 			{
 				computerBrick = computerBricks.create(200 - (x * 36), 100 + (y * 52), 'computerBrick');
 				computerBrick.scale.setTo(.0625, .0625);
