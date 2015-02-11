@@ -218,7 +218,7 @@ window.onload = function()
 	function updateComputerTiles()
 	{
 		totalComputerBricks = computerBricks.countLiving();;
-		computerTilesLeftText.text = 'Computer Tiles: ' + totalComputerBricks;
+		cpuTilesLeftText.text = 'Computer Tiles: ' + totalComputerBricks;
 		//update text;
 	}
 	
