@@ -121,7 +121,7 @@ window.onload = function()
 	function update() 
 	{
 		
-		playerPaddle.x = game.input.x;
+		//playerPaddle.x = game.input.x;
 
 		if (playerPaddle.x < 24)
 		{
