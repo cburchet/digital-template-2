@@ -168,14 +168,8 @@ window.onload = function()
 	
 	//insert bricks text
 	_ball.body.velocity.x += .2;
-	if (_brick === 'computerBricks')
-	{
-		updateComputerTiles();
-	}
-	else
-	{
-		updatePlayerTiles();
-	}
+	updateComputerTiles();
+	updatePlayerTiles();
 
     if (playerBricks.countLiving() === 0 || computerBricks.countLiving() === 0)
     {
@@ -187,7 +181,7 @@ window.onload = function()
         ball.y = playerPaddle.y;
 
         playerBricks.callAll('revive');
-		computerBricks.callAll('revive');
+	computerBricks.callAll('revive');
     }
 
 }
@@ -216,14 +210,14 @@ window.onload = function()
 	
 	function updatePlayerTiles()
 	{
-		totalPlayerBricks--;
+		totalPlayerBricks = playerBricks.countLiving();
 		playerTilesLeftText.text = 'Player Tiles: ' + totalPlayerBricks;
 		//update text
 	}
 	
 	function updateComputerTiles()
 	{
-		totalComputerBricks--;
+		totalComputerBricks = computerBricks.countLiving();;
 		computerTilesLeftText.text = 'Computer Tiles: ' + totalComputerBricks;
 		//update text;
 	}
