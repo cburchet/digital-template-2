@@ -52,7 +52,7 @@ window.onload = function()
 		{
 			for (var y = 0; y < 15; y++)
 			{
-				playerBrick = playerBricks.create(600 + (x * 36), 100 + (y * 52), 'playerBrick
+				playerBrick = playerBricks.create(600 + (x * 36), 100 + (y * 52), 'playerBrick');
 				playerBrick.scale.setTo(.125, .125);
 				playerBrick.angle = 90;
 				playerBrick.body.bounce.set(1);
