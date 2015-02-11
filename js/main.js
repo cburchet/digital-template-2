@@ -84,7 +84,7 @@ window.onload = function()
 		game.physics.enable(playerPaddle, Phaser.Physics.ARCADE);
 		playerPaddle.scale.setTo(.5, .5);
 		playerPaddle.angle = 90;
-		playerPaddle.anchor.setTo(0.5, 0.5);
+		playerPaddle.anchor.setTo(0.25, 0.25);
 		game.physics.enable('playerPaddle', Phaser.Physics.ARCADE);
 		
 		playerPaddle.body.collideWorldBounds = true;
