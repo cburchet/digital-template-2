@@ -80,7 +80,7 @@ window.onload = function()
 		
 		
 		//paddle settings
-		playerPaddle = game.add.sprite(game.world.centerX + 150, game.world.centerY, 'playerPaddle');
+		playerPaddle = game.add.sprite(game.world.centerX + 175, game.world.centerY, 'playerPaddle');
 		game.physics.enable(playerPaddle, Phaser.Physics.ARCADE);
 		playerPaddle.scale.setTo(.5, .5);
 		playerPaddle.angle = 90;
@@ -92,7 +92,7 @@ window.onload = function()
 		playerPaddle.body.immovable = true;
 		
 		//computer paddle settings
-		computerPaddle = game.add.sprite(game.world.centerX - 150, game.world.centerY, 'computerPaddle');
+		computerPaddle = game.add.sprite(game.world.centerX - 175, game.world.centerY, 'computerPaddle');
 		game.physics.enable(computerPaddle, Phaser.Physics.ARCADE);
 		computerPaddle.scale.setTo(.5, .5);
 		computerPaddle.angle = 90;
