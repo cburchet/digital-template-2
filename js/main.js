@@ -170,7 +170,7 @@ window.onload = function()
 		updatePlayerTiles();
 	}
 
-    if (playerBricks.countLiving() == 0 || computerBricks.countLiving() == 0)
+    if (playerBricks.countLiving() === 0 || computerBricks.countLiving() === 0)
     {
         introText.text = '- Next Level -';
 
