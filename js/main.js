@@ -77,12 +77,10 @@ window.onload = function()
 			}
 		}
 		
-		//paddle physics
-		game.physics.enable(playerPaddle, Phaser.Physics.ARCADE);
-		game.physics.enable(computerPaddle, Phaser.Physics.ARCADE);
 		
 		//paddle settings
 		playerPaddle = game.add.sprite(game.world.centerX + 200, game.world.centerY, 'playerPaddle');
+		game.physics.enable(playerPaddle, Phaser.Physics.ARCADE);
 		playerPaddle.angle = 90;
 		playerPaddle.anchor.setTo(0.5, 0.5);
 		game.physics.enable('playerPaddle', Phaser.Physics.ARCADE);
@@ -93,6 +91,7 @@ window.onload = function()
 		
 		//computer paddle settings
 		computerPaddle = game.add.sprite(game.world.centerX - 200, game.world.centerY, 'computerPaddle');
+		game.physics.enable(computerPaddle, Phaser.Physics.ARCADE);
 		computerPaddle.angle = 90;
 		computerPaddle.anchor.setTo(0.5, 0.5);
 		game.physics.enable('computerPaddle', Phaser.Physics.ARCADE);
