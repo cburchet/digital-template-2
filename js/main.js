@@ -6,6 +6,8 @@ window.onload = function()
 	
 	var ballOnPaddle = true;
 	
+	var cursors;
+	
 	var ball;
 	var playerPaddle;
 	var playerBricks;
@@ -170,6 +172,8 @@ window.onload = function()
 		updatePlayerTiles();
 	}
 
+    if (playerBricks.countLiving() === 0 || computerBricks.countLiving() === 0)
+    {
         introText.text = '- Next Level -';
 
         ballOnPaddle = true;
@@ -180,6 +184,7 @@ window.onload = function()
 
         playerBricks.callAll('revive');
 		computerBricks.callAll('revive');
+    }
 
 }
 	
@@ -208,19 +213,21 @@ window.onload = function()
 	function updatePlayerTiles()
 	{
 		totalPlayerBricks--;
+		playerTilesLeftText.text = 'Player Tiles: ' + totalPlayerBricks;
 		//update text
 	}
 	
 	function updateComputerTiles()
 	{
 		totalComputerBricks--;
+		computerTilesLeftText.text = 'Computer Tiles: ' + totalComputerBricks;
 		//update text;
 	}
 	
 	//function gameover()
 	//{
 	//	this.game.paused = true;
-//		gameoverText = game.add.text(350, 300, 'Game Over', { fontSize: '128px', fill: '#000' });
+	//	gameoverText = game.add.text(350, 300, 'Game Over', { fontSize: '128px', fill: '#000' });
 	//}
 };
 	 
