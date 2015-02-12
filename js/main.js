@@ -102,6 +102,20 @@ window.onload = function()
 	{
 		//computer paddle movement
 		computerPaddle.body.velocity.y = 0;
+		
+		if (computerPaddle.x > ball.x && computerPaddle.y > game.world.centerY)
+		{
+			computerPaddle.body.velocity.y = -200;
+		}
+		else if (computerPaddle.x > ball.x && computerPaddle.y < game.world.centerY)
+		{
+			computerPaddle.body.velocity.y = -200;
+		}
+		else
+		{
+			computerPaddle.body.velocity.y = 0;
+		}
+		
 		if (computerPaddle.y < ball.y && computerPaddle.x < ball.x)
 		{
 			computerPaddle.body.velocity.y = 200;
