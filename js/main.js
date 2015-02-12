@@ -102,11 +102,11 @@ window.onload = function()
 	{
 		//computer paddle movement
 		computerPaddle.body.velocity.y = 0;
-		if (computerPaddle.y < ball.y)
+		if (computerPaddle.y < ball.y && computerPaddle.x < ball.x)
 		{
 			computerPaddle.body.velocity.y = 200;
 		}
-		else if (computerPaddle.y > ball.y)
+		else if (computerPaddle.y > ball.y && computerPaddle.x < ball.x)
 		{
 			computerPaddle.body.velocity.y = -200;
 		}
