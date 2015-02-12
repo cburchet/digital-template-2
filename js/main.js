@@ -11,13 +11,13 @@ window.onload = function()
 	var ball;
 	var playerPaddle;
 	var playerBricks;
+	var level = 1;
 	var totalPlayerBricks = (level + 3) * 10;
 	
 	var computerPaddle;
 	var computerBricks;
 	var totalComputerBricks = (level + 3) * 10;
 	
-	var level = 1;
 	var gameoverText;
 	var playerTilesLeftText;
 	var introText;
