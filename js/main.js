@@ -2,7 +2,7 @@ window.onload = function()
 {
 	"use strict";
 
-	var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update });
+	var game = new Phaser.Game(1000, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update });
 	
 	var ballOnPaddle = true;
 	
@@ -17,6 +17,7 @@ window.onload = function()
 	var computerBricks;
 	var totalComputerBricks = 40;
 	
+	var level;
 	var gameoverText;
 	var playerTilesLeftText;
 	var introText;
@@ -46,38 +47,13 @@ window.onload = function()
 		playerBricks.enableBody = true;
 		playerBricks.physicsBodyType = Phaser.Physics.ARCADE;
 
-		var playerBrick;
-
-		for (var x = 0; x < 4; x++)
-		{
-			for (var y = 0; y < 10; y++)
-			{
-				playerBrick = playerBricks.create(600 + (x * 36), 100 + (y * 52), 'playerBrick');
-				playerBrick.scale.setTo(.0625, .0625);
-				playerBrick.angle = 90;
-				playerBrick.body.bounce.set(1);
-				playerBrick.body.immovable = true;
-			}
-		}
 		
 		computerBricks = game.add.group();
 		computerBricks.enableBody = true;
 		computerBricks.physicsBodyType = Phaser.Physics.ARCADE;
 		
-		var computerBrick;
-
-		for (var x = 0; x < 4; x++)
-		{
-			for (var y = 0; y < 10; y++)
-			{
-				computerBrick = computerBricks.create(200 - (x * 36), 100 + (y * 52), 'computerBrick');
-				computerBrick.scale.setTo(.0625, .0625);
-				computerBrick.angle = 90;
-				computerBrick.body.bounce.set(1);
-				computerBrick.body.immovable = true;
-			}
-		}
-		
+		//place the bricks
+		createTiles();
 		
 		//paddle settings
 		playerPaddle = game.add.sprite(game.world.centerX + 125, game.world.centerY, 'playerPaddle');
@@ -192,11 +168,49 @@ window.onload = function()
         ball.x = playerPaddle.x - 16;
         ball.y = playerPaddle.y;
 
-        playerBricks.callAll('revive');
-	computerBricks.callAll('revive');
+	level++;
+	totalPlayerBricks = (level+3) * 10;
+	totalComputerBricks = (level + 3) * 10;
+	updateComputerTiles();
+	updatePlayerTiles();
+	createTiles();
+
+        //playerBricks.callAll('revive');
+	//computerBricks.callAll('revive');
     }
 
 }
+	
+	function createTiles()
+	{
+		var playerBrick;
+
+		for (var x = 0; x < (level + 3); x++)
+		{
+			for (var y = 0; y < 10; y++)
+			{
+				playerBrick = playerBricks.create(600 + (x * 36), 100 + (y * 52), 'playerBrick');
+				playerBrick.scale.setTo(.0625, .0625);
+				playerBrick.angle = 90;
+				playerBrick.body.bounce.set(1);
+				playerBrick.body.immovable = true;
+			}
+		}
+		
+		var computerBrick;
+
+		for (var x = 0; x < (level + 3); x++)
+		{
+			for (var y = 0; y < 10; y++)
+			{
+				computerBrick = computerBricks.create(200 - (x * 36), 100 + (y * 52), 'computerBrick');
+				computerBrick.scale.setTo(.0625, .0625);
+				computerBrick.angle = 90;
+				computerBrick.body.bounce.set(1);
+				computerBrick.body.immovable = true;
+			}
+		}
+	}
 	
 	function ballHitPaddle (_ball, _paddle) {
 
