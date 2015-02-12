@@ -271,7 +271,6 @@ window.onload = function()
 	{
 		introText.text.visible = true;
 		introText.text = '- Game Over Click to Restart -';
-		game.input.onDown.add(releaseBall, this);
 		
 
 	        ballOnPaddle = true;
