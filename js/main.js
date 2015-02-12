@@ -124,7 +124,19 @@ window.onload = function()
 	 
 	function update() 
 	{
+		//computer paddle movement
+		computerPaddle.velocity.y = 0;
+		if (computerPaddle.y < ball.y)
+		{
+			computerPaddle.velocity.y = 100;
+		}
+		else if (computerPaddle.y > ball.y)
+		{
+			computerPaddle.velocity.y = -100
+		}
 		
+		
+		//player paddle movement
 		playerPaddle.y = game.input.y;
 
 		if (playerPaddle.y < 24)
