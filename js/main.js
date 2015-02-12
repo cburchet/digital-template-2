@@ -125,7 +125,7 @@ window.onload = function()
 	function update() 
 	{
 		//computer paddle movement
-		computerPaddle.velocity.y = 0;
+		//computerPaddle.velocity.y = 0;
 		if (computerPaddle.y < ball.y)
 		{
 			computerPaddle.velocity.y = 100;
