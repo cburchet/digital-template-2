@@ -14,6 +14,7 @@ window.onload = function()
 	var level = 1;
 	var totalPlayerBricks = (level + 3) * 10;
 	
+	var paddleSpeed = 175;
 	var computerPaddle;
 	var computerBricks;
 	var totalComputerBricks = (level + 3) * 10;
@@ -105,11 +106,11 @@ window.onload = function()
 		
 		if (computerPaddle.x > ball.x && computerPaddle.y > game.world.centerY)
 		{
-			computerPaddle.body.velocity.y = -200;
+			computerPaddle.body.velocity.y = -paddleSpeed;
 		}
 		else if (computerPaddle.x > ball.x && computerPaddle.y < game.world.centerY)
 		{
-			computerPaddle.body.velocity.y = 200;
+			computerPaddle.body.velocity.y = paddleSpeed;
 		}
 		else
 		{
@@ -118,11 +119,11 @@ window.onload = function()
 		
 		if (computerPaddle.y < ball.y && computerPaddle.x < ball.x)
 		{
-			computerPaddle.body.velocity.y = 200;
+			computerPaddle.body.velocity.y = paddleSpeed;
 		}
 		else if (computerPaddle.y > ball.y && computerPaddle.x < ball.x)
 		{
-			computerPaddle.body.velocity.y = -200;
+			computerPaddle.body.velocity.y = -paddleSpeed;
 		}
 		
 		
@@ -183,6 +184,7 @@ window.onload = function()
         ball.y = playerPaddle.y;
 
 	level++;
+	paddleSpeed += 25;
 	totalPlayerBricks = (level+3) * 10;
 	totalComputerBricks = (level + 3) * 10;
 	updateComputerTiles();
