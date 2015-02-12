@@ -125,14 +125,14 @@ window.onload = function()
 	function update() 
 	{
 		//computer paddle movement
-		//computerPaddle.velocity.y = 0;
+		computerPaddle.body.velocity.y = 0;
 		if (computerPaddle.y < ball.y)
 		{
-			computerPaddle.velocity.y = 100;
+			computerPaddle.body.velocity.y = 100;
 		}
 		else if (computerPaddle.y > ball.y)
 		{
-			computerPaddle.velocity.y = -100;
+			computerPaddle.body.velocity.y = -100;
 		}
 		
 		
