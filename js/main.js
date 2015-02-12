@@ -56,7 +56,7 @@ window.onload = function()
 		createTiles();
 		
 		//paddle settings
-		playerPaddle = game.add.sprite(game.world.centerX + 125, game.world.centerY, 'playerPaddle');
+		playerPaddle = game.add.sprite(650, game.world.centerY, 'playerPaddle');
 		game.physics.enable(playerPaddle, Phaser.Physics.ARCADE);
 		playerPaddle.scale.setTo(.5, .5);
 		playerPaddle.angle = 90;
@@ -68,7 +68,7 @@ window.onload = function()
 		playerPaddle.body.immovable = true;
 		
 		//computer paddle settings
-		computerPaddle = game.add.sprite(game.world.centerX - 175, game.world.centerY, 'computerPaddle');
+		computerPaddle = game.add.sprite(350, game.world.centerY, 'computerPaddle');
 		game.physics.enable(computerPaddle, Phaser.Physics.ARCADE);
 		computerPaddle.scale.setTo(.5, .5);
 		computerPaddle.angle = 90;
@@ -189,7 +189,7 @@ window.onload = function()
 		{
 			for (var y = 0; y < 10; y++)
 			{
-				playerBrick = playerBricks.create(600 + (x * 36), 100 + (y * 52), 'playerBrick');
+				playerBrick = playerBricks.create(700 + (x * 36), 100 + (y * 52), 'playerBrick');
 				playerBrick.scale.setTo(.0625, .0625);
 				playerBrick.angle = 90;
 				playerBrick.body.bounce.set(1);
@@ -203,7 +203,7 @@ window.onload = function()
 		{
 			for (var y = 0; y < 10; y++)
 			{
-				computerBrick = computerBricks.create(200 - (x * 36), 100 + (y * 52), 'computerBrick');
+				computerBrick = computerBricks.create(300 - (x * 36), 100 + (y * 52), 'computerBrick');
 				computerBrick.scale.setTo(.0625, .0625);
 				computerBrick.angle = 90;
 				computerBrick.body.bounce.set(1);
