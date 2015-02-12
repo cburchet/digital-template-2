@@ -128,11 +128,11 @@ window.onload = function()
 		computerPaddle.body.velocity.y = 0;
 		if (computerPaddle.y < ball.y)
 		{
-			computerPaddle.body.velocity.y = 100;
+			computerPaddle.body.velocity.y = 200;
 		}
 		else if (computerPaddle.y > ball.y)
 		{
-			computerPaddle.body.velocity.y = -100;
+			computerPaddle.body.velocity.y = -200;
 		}
 		
 		
