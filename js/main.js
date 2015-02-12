@@ -64,13 +64,13 @@ window.onload = function()
 		playerPaddle.height = 32;
 		playerPaddle.angle = 90;
 		//playerPaddle.centerOffsets();
-		//playerPaddle.anchor.setTo(0.25, 0.25);
+		playerPaddle.anchor.setTo(0.5, 0.5);
 		game.physics.enable('playerPaddle', Phaser.Physics.ARCADE);
 		
 		playerPaddle.body.collideWorldBounds = true;
 		playerPaddle.body.bounce.set(1);
 		playerPaddle.body.immovable = true;
-		game.debug.body(playerPaddle);
+	//	game.debug.body(playerPaddle);
 		
 		//computer paddle settings
 		computerPaddle = game.add.sprite(350, game.world.centerY, 'computerPaddle');
