@@ -60,7 +60,7 @@ window.onload = function()
 		playerPaddle = game.add.sprite(650, game.world.centerY, 'playerPaddle');
 		game.physics.enable(playerPaddle, Phaser.Physics.ARCADE);
 		//playerPaddle.scale.setTo(.5, .5);
-		playerPaddle.width = 96;
+		playerPaddle.width = 128;
 		playerPaddle.height = 32;
 		playerPaddle.angle = 90;
 		//playerPaddle.centerOffsets();
