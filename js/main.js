@@ -12,12 +12,12 @@ window.onload = function()
 	var playerPaddle;
 	var playerBricks;
 	var level = 1;
-	var totalPlayerBricks = (level + 3) * 10;
+	var totalPlayerBricks = (level + 3) * 11;
 	
 	var paddleSpeed = 175;
 	var computerPaddle;
 	var computerBricks;
-	var totalComputerBricks = (level + 3) * 10;
+	var totalComputerBricks = (level + 3) * 11;
 	
 	var gameoverText;
 	var playerTilesLeftText;
@@ -203,7 +203,7 @@ window.onload = function()
 
 		for (var x = 0; x < (level + 3); x++)
 		{
-			for (var y = 0; y < 10; y++)
+			for (var y = 0; y < 11; y++)
 			{
 				playerBrick = playerBricks.create(700 + (x * 36), 40 + (y * 52), 'playerBrick');
 				playerBrick.scale.setTo(.0625, .0625);
@@ -217,7 +217,7 @@ window.onload = function()
 
 		for (var x = 0; x < (level + 3); x++)
 		{
-			for (var y = 0; y < 10; y++)
+			for (var y = 0; y < 11; y++)
 			{
 				computerBrick = computerBricks.create(300 - (x * 36), 40 + (y * 52), 'computerBrick');
 				computerBrick.scale.setTo(.0625, .0625);
