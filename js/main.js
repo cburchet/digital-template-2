@@ -176,6 +176,7 @@ window.onload = function()
 
     if (computerBricks.countLiving() === 0)
     {
+    	introText.text.visible = true;
         introText.text = '- Next Level -';
 
         ballOnPaddle = true;
@@ -268,7 +269,10 @@ window.onload = function()
 	
 	function gameover()
 	{
+		introText.text.visible = true;
 		introText.text = '- Game Over Click to Restart -';
+		game.input.onDown.add(releaseBall, this);
+		
 
 	        ballOnPaddle = true;
 	        ball.body.velocity.set(0);
@@ -282,6 +286,8 @@ window.onload = function()
 		updateComputerTiles();
 		updatePlayerTiles();
 		createTiles();
+		
+		game.input.onDown.add(releaseBall, this);
 	}
 };
 	 
