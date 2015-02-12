@@ -174,7 +174,7 @@ window.onload = function()
 	updateComputerTiles();
 	updatePlayerTiles();
 
-    if (playerBricks.countLiving() === 0 || computerBricks.countLiving() === 0)
+    if (computerBricks.countLiving() === 0)
     {
         introText.text = '- Next Level -';
 
@@ -185,14 +185,16 @@ window.onload = function()
 
 	level++;
 	paddleSpeed += 25;
-	totalPlayerBricks = (level+3) * 10;
-	totalComputerBricks = (level + 3) * 10;
+	totalPlayerBricks = (level+3) * 11;
+	totalComputerBricks = (level + 3) * 11;
 	updateComputerTiles();
 	updatePlayerTiles();
 	createTiles();
 
-        //playerBricks.callAll('revive');
-	//computerBricks.callAll('revive');
+    }
+    else if (playerBricks.countLiving() === 0 )
+    {
+    	gameover();
     }
 
 }
@@ -264,10 +266,22 @@ window.onload = function()
 		//update text;
 	}
 	
-	//function gameover()
-	//{
-	//	this.game.paused = true;
-	//	gameoverText = game.add.text(350, 300, 'Game Over', { fontSize: '128px', fill: '#000' });
-	//}
+	function gameover()
+	{
+		introText.text = '- Game Over Click to Restart -';
+
+	        ballOnPaddle = true;
+	        ball.body.velocity.set(0);
+	        ball.x = playerPaddle.x - 16;
+	        ball.y = playerPaddle.y;
+	
+		level = 1;
+		paddleSpeed = 175;
+		totalPlayerBricks = (level+3) * 11;
+		totalComputerBricks = (level + 3) * 11;
+		updateComputerTiles();
+		updatePlayerTiles();
+		createTiles();
+	}
 };
 	 
