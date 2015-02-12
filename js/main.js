@@ -109,7 +109,7 @@ window.onload = function()
 		}
 		else if (computerPaddle.x > ball.x && computerPaddle.y < game.world.centerY)
 		{
-			computerPaddle.body.velocity.y = -200;
+			computerPaddle.body.velocity.y = 200;
 		}
 		else
 		{
