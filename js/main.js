@@ -132,7 +132,7 @@ window.onload = function()
 		}
 		else if (computerPaddle.y > ball.y)
 		{
-			computerPaddle.velocity.y = -100
+			computerPaddle.velocity.y = -100;
 		}
 		
 		
