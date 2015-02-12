@@ -70,7 +70,7 @@ window.onload = function()
 		playerPaddle.body.collideWorldBounds = true;
 		playerPaddle.body.bounce.set(1);
 		playerPaddle.body.immovable = true;
-	//	game.debug.body(playerPaddle);
+		game.debug.body(playerPaddle);
 		
 		//computer paddle settings
 		computerPaddle = game.add.sprite(350, game.world.centerY, 'computerPaddle');
