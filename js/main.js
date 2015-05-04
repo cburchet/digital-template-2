@@ -74,7 +74,6 @@ window.onload = function()
 		game.physics.enable(computerPaddle, Phaser.Physics.ARCADE);
 	//	computerPaddle.width = 32;
 	//	computerPaddle.height = 128;
-		computerPaddle.scale.setTo(.5, .5);
 		computerPaddle.anchor.setTo(0.5, 0.5);
 		game.physics.enable('computerPaddle', Phaser.Physics.ARCADE);
 		
