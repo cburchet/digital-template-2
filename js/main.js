@@ -65,6 +65,8 @@ window.onload = function()
 		
 		playerPaddle.body.collideWorldBounds = true;
 		playerPaddle.body.bounce.set(1);
+		playerPaddle.width = 32;
+		playerPaddle.height = 128;
 		playerPaddle.body.immovable = true;
 		game.debug.body(playerPaddle);
 		
