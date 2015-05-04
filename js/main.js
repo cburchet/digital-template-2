@@ -68,13 +68,11 @@ window.onload = function()
 		playerPaddle.width = 32;
 		playerPaddle.height = 128;
 		playerPaddle.body.immovable = true;
-		game.debug.body(playerPaddle);
 		
 		//computer paddle settings
 		computerPaddle = game.add.sprite(350, game.world.centerY, 'computerPaddle');
 		game.physics.enable(computerPaddle, Phaser.Physics.ARCADE);
 		computerPaddle.scale.setTo(.5, .5);
-		computerPaddle.angle = 90;
 		computerPaddle.anchor.setTo(0.25, 0.25);
 		game.physics.enable('computerPaddle', Phaser.Physics.ARCADE);
 		
