@@ -62,8 +62,6 @@ window.onload = function()
 		//playerPaddle.scale.setTo(.5, .5);
 		playerPaddle.width = 128;
 		playerPaddle.height = 32;
-		playerPaddle.angle = 90;
-		playerPaddle.body.angle = 90;
 		playerPaddle.anchor.setTo(0.5, 0.5);
 		game.physics.enable('playerPaddle', Phaser.Physics.ARCADE);
 		
