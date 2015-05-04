@@ -72,10 +72,10 @@ window.onload = function()
 		//computer paddle settings
 		computerPaddle = game.add.sprite(350, game.world.centerY, 'computerPaddle');
 		game.physics.enable(computerPaddle, Phaser.Physics.ARCADE);
-		computerPaddle.width = 32;
-		computerPaddle.height = 128;
+	//	computerPaddle.width = 32;
+	//	computerPaddle.height = 128;
 		computerPaddle.scale.setTo(.5, .5);
-		computerPaddle.anchor.setTo(0.25, 0.25);
+		computerPaddle.anchor.setTo(0.5, 0.5);
 		game.physics.enable('computerPaddle', Phaser.Physics.ARCADE);
 		
 		computerPaddle.body.collideWorldBounds = true;
